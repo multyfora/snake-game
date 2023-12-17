@@ -1,0 +1,190 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+#game-board{
+    background-color: #EDD3C4;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.snake{
+    background-color: #EA00FF;
+    border: .1vmin solid black;
+}
+
+.food{
+    background-color: yellow;
+    border: .1vmin solid black;
+}
+
+
+
+.game-over{
+    height: 100vmin;
+    width: 100vmin;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0;
+}
+
+.game-over-text{
+    font-family: 'Manrope', sans-serif;
+    color: white;
+    font-size: 20vmin;
+    text-align:center;
+    text-shadow: #EA00FF 0px 0px 19px, #EA00FF 0px 0px 40px;
+}
+
+
+
+.button {
+    margin-top: 30vmin;
+    position: absolute;
+    background: #444;
+    visibility: hidden;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    transform: scale(3);
+    letter-spacing: 0.1rem;
+    font-size: 1.5vmin;
+    padding: 1.5vmin 4.5vmin;
+    transition: 0.2s;
+  }
+  
+.button:hover {
+    letter-spacing: 0.3vmin;
+    padding: 1.65vmin 4.65vmin;
+    background: var(--clr);
+    color: var(--clr);
+    /* box-shadow: 0 0 35px var(--clr); */
+    animation: box 3s infinite;
+  }
+  
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0.2vmin;
+    background: #272822;
+  }
+  
+.button span {
+    position: relative;
+    z-index: 1;
+  }
+.button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+.button i::before {
+    content: "";
+    position: absolute;
+    width: 1vmin;
+    height: 0.2vmin;
+    left: 80%;
+    top: -0.2vmin;
+    border: 0.3vmin solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+.button:hover i::before {
+    width: 1.5vmin;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+.button i::after {
+    content: "";
+    position: absolute;
+    width: 1vmin;
+    height: 0.2vmin;
+    left: 20%;
+    bottom: -0.2vmin;
+    border: 0.3vmin solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+.button:hover i::after {
+    width: 1.5vmin;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(0.5vmin);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 2.5vmin var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
+
+  #snake-control{
+    position: absolute;
+    opacity: 0.3;
+    transform: translateY(-50vmin);
+    /* margin-left: 5vmin; */
+    padding: 5vmin;
+    height: 12vmin;
+    width: 20vmin;
+    text-align: center;
+    transition: all 0.25s;
+    animation-timing-function: ease-in-out;
+  }
+
+  #snake-control:hover{
+    opacity: 1;
+  }
+
+  #snake-speed-range{
+    width: 20vmin;
+  }
+  
+  #snake-speed-label{
+    font-family: 'Manrope', sans-serif;
+    color: #EA00FF;
+    font-size: 2vmin;
+  }
+
+  #snake-expansion-range{
+    width: 20vmin;
+  }
+  
+  #snake-expansion-label{
+    font-family: 'Manrope', sans-serif;
+    color: #EA00FF;
+    font-size: 2vmin;
+  }
+

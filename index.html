@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+    
+<div id="snake-control" tabindex="-1">
+    <label id="snake-speed-label" for="snake-speed-range">Speed</label>
+    <input type="range" class="slider" id="snake-speed-range" name="snake-speed-range" min="1" max="15" value="5">
+    <label id="snake-expansion-label" for="snake-expansion-range">expansion rate</label>
+    <input type="range" class="slider" id="snake-expansion-range" name="snake-expansion-range" min="1" max="10" value="3">
+</div>
+
+
+
+</div>
+
+    <div id="game-board"></div>
+    <button id="button" class="button" style="--clr:#EA00FF"><span>START AGAIN</span><i></i></button>
+    
+    
+</body>
+</html>
+
+
