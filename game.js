@@ -49,3 +49,10 @@ window.onload = function() {
     document.onselectstart = function() { return false; } // for IE
     document.onmousedown = function() { return false; } // for other browsers
 }
+
+document.getElementById('snake-speed-range').addEventListener('change',function() {
+    this.setAttribute('value',this.value);
+  });
+document.getElementById('snake-expansion-range').addEventListener('change',function() {
+this.setAttribute('value',this.value);
+});

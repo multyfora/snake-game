@@ -18,7 +18,8 @@ body{
 }
 
 .snake{
-    background-color: #EA00FF;
+    /* background-color: #EA00FF; */
+    background-color: green;
     border: .1vmin solid black;
 }
 
@@ -152,10 +153,10 @@ body{
   }
 
   #snake-control{
+    pointer-events: auto;
     position: absolute;
     opacity: 0.3;
     transform: translateY(-50vmin);
-    /* margin-left: 5vmin; */
     padding: 5vmin;
     height: 12vmin;
     width: 20vmin;
@@ -179,6 +180,7 @@ body{
   }
 
   #snake-expansion-range{
+    pointer-events: all;
     width: 20vmin;
   }
   
