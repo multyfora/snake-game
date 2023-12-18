@@ -29,7 +29,7 @@ export function draw(gameBoard){
         if(index%2 ===0) snakeElement.style.transform = "scale(1.01)";
         if(index===0){ 
         snakeElement.style.scale = "1.1";
-        snakeElement.style.boxShadow = "#FFFFFF 0px 0px 1.9vmin";
+        snakeElement.style.boxShadow = "#470746 0px 0px 2vmin";
         snakeElement.style.backgroundColor = "#FA00AA";
 
     }
