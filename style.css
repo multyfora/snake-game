@@ -18,8 +18,7 @@ body{
 }
 
 .snake{
-    /* background-color: #EA00FF; */
-    background-color: green;
+    background-color: #EA00FF;
     border: .1vmin solid black;
 }
 
