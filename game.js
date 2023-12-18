@@ -45,14 +45,16 @@ function checkDeath(){
 }
 
 
-window.onload = function() {
-    document.onselectstart = function() { return false; } // for IE
-    document.onmousedown = function() { return false; } // for other browsers
-}
+const rangeInput = document.getElementById("snake-speed-range");
+const rangeInput1 = document.getElementById("snake-expansion-range");
 
-document.getElementById('snake-speed-range').addEventListener('change',function() {
-    this.setAttribute('value',this.value);
-  });
-document.getElementById('snake-expansion-range').addEventListener('change',function() {
-this.setAttribute('value',this.value);
+rangeInput.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+  }
 });
+rangeInput1.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+    }
+  });

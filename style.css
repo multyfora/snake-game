@@ -6,6 +6,7 @@ body{
     align-items: center;
     margin: 0;
     background-color: black;
+    overflow: hidden;
 }
 
 #game-board{
@@ -41,10 +42,11 @@ body{
 
 .game-over-text{
     font-family: 'Manrope', sans-serif;
+    user-select: none;
     color: white;
     font-size: 20vmin;
     text-align:center;
-    text-shadow: #EA00FF 0px 0px 19px, #EA00FF 0px 0px 40px;
+    text-shadow: #EA00FF 0px 0px 1.9vmin, #EA00FF 0px 0px 4vmin;
 }
 
 
@@ -173,6 +175,7 @@ body{
   }
   
   #snake-speed-label{
+    user-select: none;
     font-family: 'Manrope', sans-serif;
     color: #EA00FF;
     font-size: 2vmin;
@@ -184,8 +187,20 @@ body{
   }
   
   #snake-expansion-label{
+    user-select: none;
     font-family: 'Manrope', sans-serif;
     color: #EA00FF;
     font-size: 2vmin;
+  }
+
+  .score{
+    position: absolute;
+    user-select: none;
+    transform: translate(-38vmin, -45vmin);
+    font-size: 5vmin;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    text-align:center;
+    text-shadow: #EA00FF 0px 0px 1.9vmin, #EA00FF 0px 0px 4vmin;
   }
 

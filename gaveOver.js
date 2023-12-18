@@ -1,5 +1,5 @@
 import { gameOver } from "./game.js";
-
+import { getSnakeLength } from "./snake.js";
 
 export function draw(gameBoard){
 
@@ -19,8 +19,13 @@ if(gameOver){
     gameOverText.innerHTML = "GAME OVER";
     gameOverScreen.appendChild(gameOverText);
 
-    showRestartButton();
+    const score = document.createElement('div');
+    score.classList.add('score');
+    score.innerHTML = "Score: " + getSnakeLength();
+    gameOverScreen.appendChild(score);
 
+    showRestartButton();
+    
 
 
     }
