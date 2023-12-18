@@ -6,7 +6,7 @@ export function draw(gameBoard){
 if(gameOver){
 
     const gameOverScreen = document.createElement('div');
-    gameOverScreen.style.backgroundImage = "url('abstractBG.jpg')";
+    // gameOverScreen.style.backgroundImage = "url('abstractBG.jpg')";
     gameOverScreen.style.height = "100vmin";
     gameOverScreen.style.width = "100vmin";
     gameOverScreen.classList.add('game-over');

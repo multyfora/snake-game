@@ -38,6 +38,8 @@ body{
     justify-content: center;
     align-items:center;
     margin: 0;
+    background-color: #101010cc;
+    background-size: 300vmin;
 }
 
 .game-over-text{
