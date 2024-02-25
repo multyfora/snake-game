@@ -37,6 +37,6 @@ function showRestartButton(){
 
 document.getElementById("button").addEventListener('click', function(){
     
-    window.location = '/';
+    window.location = '/snake-game/';
 
 });
